@@ -1,0 +1,67 @@
+using Assets.Scripts.Enemies;
+using NUnit.Framework;
+using System.Collections.Generic;
+using System;
+using UnityEngine;
+
+/// <summary>
+/// Handles the logic of collecting items and opening Pandora's Box. The box will open every time a new item is collected, resulting in a swarm of enemies.
+/// </summary>
+public class PandorasBox : MonoBehaviour
+{
+
+    private ICollectible[] collectibles;
+
+    public ICollectible[] Collectibles => collectibles;
+    [Header("Pandora's Box Settings")]
+    [SerializeField] private PandoraWeights _pandoraWeights;
+
+    [Header("Hyperparameters")]
+    [SerializeField][Min(0)] private int _lowerBoundSpawn = 1;
+    [SerializeField][Min(1)] private int _upperBoundSpawn = 5;
+    [SerializeField][Min(0)] private float _lowerBoundVelocity = 1;
+    [SerializeField][Min(0)] private float _upperBoundVelocity = 5;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent(out ICollectible collectible))
+        {
+            AddCollectible(collectible);
+        }
+    }
+
+    public void AddCollectible(ICollectible collectible)
+    {
+        // Declare to collectible that it has been collected, so it can do its own logic (e.g. disappear, play sound, etc.)
+        collectible.Collect();
+         
+        // Add collectible to inventory
+        if (collectibles != null)
+        {
+            var structure = new ICollectible[collectibles.Length + 1];
+            Array.Copy(collectibles, structure, collectibles.Length);
+            structure[structure.Length - 1] = collectible;
+            return;
+        }
+
+        collectibles = new ICollectible[] { collectible };
+
+        // TODO: Add Logic to open Pandora's Box every time a collectible is added.
+    }
+
+    public void OpenBox(int iterations = 1)
+    {
+        var numberToSpawn = UnityEngine.Random.Range(_lowerBoundSpawn, _upperBoundSpawn + 1);
+        var selectedEnemies = new List<Enemy>();
+        var enemies = _pandoraWeights.GetRandomEnemies(numberToSpawn, PandoraWeights.EnemyType.None);
+        foreach (var enemy in enemies)
+        {
+            Instantiate(enemy);
+        }
+
+        if (iterations >= 1)
+        {
+            OpenBox(iterations - 1);
+        }
+    }
+}
