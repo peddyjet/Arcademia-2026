@@ -16,6 +16,18 @@ public class MovementController : MonoBehaviour
 
     private void Update()
     {
-        _rb.linearVelocity = Vector2.Lerp(_rb.linearVelocity, _directionOfTravel * _speed, _accelerationSpeed * Time.deltaTime);
+        HandleVelocity();
+    }
+
+    private void HandleVelocity()
+    {
+        if (_directionOfTravel == Vector2.zero)
+        {
+            _rb.linearVelocity = Vector2.zero;
+        }
+        else
+        {
+            _rb.linearVelocity = Vector2.Lerp(_rb.linearVelocity, _directionOfTravel * _speed, _accelerationSpeed * Time.deltaTime);
+        }
     }
 }
