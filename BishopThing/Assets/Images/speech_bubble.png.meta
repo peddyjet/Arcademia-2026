@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2a29b7f637a4d804ca8c2c4cb345f6d4
+guid: ae7b44baa8d95c149986cd30e3a71ea3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3179908136262906254
-    second: bishop_scene1_0
+      213: 3704988796269433362
+    second: speech_bubble_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bishop_scene1_0
+      name: speech_bubble_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 9
-        width: 163
-        height: 296
+        x: 186
+        y: 163
+        width: 2444
+        height: 1187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8133502a9d412c20800000000000000
-      internalID: 3179908136262906254
+      spriteID: 212117a2ea3ca6330800000000000000
+      internalID: 3704988796269433362
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bishop_scene1_0: 3179908136262906254
+      speech_bubble_0: 3704988796269433362
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
