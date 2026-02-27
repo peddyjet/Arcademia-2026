@@ -1,5 +1,4 @@
 using Assets.Scripts.Enemies;
-using NUnit.Framework;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
@@ -21,6 +20,7 @@ public class PandorasBox : MonoBehaviour
     [SerializeField][Min(1)] private int _upperBoundSpawn = 5;
     [SerializeField][Min(0)] private float _lowerBoundVelocity = 1;
     [SerializeField][Min(0)] private float _upperBoundVelocity = 5;
+    [SerializeField][Range(0f,2f)] private float _offset = 0.3f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -56,12 +56,27 @@ public class PandorasBox : MonoBehaviour
         var enemies = _pandoraWeights.GetRandomEnemies(numberToSpawn, PandoraWeights.EnemyType.None);
         foreach (var enemy in enemies)
         {
-            Instantiate(enemy);
+            var obj = Instantiate(enemy.gameObject, transform.position + new Vector3(UnityEngine.Random.Range(-_offset, _offset),
+                UnityEngine.Random.Range(-_offset, _offset), 0), Quaternion.identity);
+            obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(UnityEngine.Random.Range(-_lowerBoundVelocity, _upperBoundVelocity),
+                UnityEngine.Random.Range(-_lowerBoundVelocity, _upperBoundVelocity)), ForceMode2D.Impulse);
+
         }
 
         if (iterations >= 1)
         {
             OpenBox(iterations - 1);
         }
+    }
+
+    void Start()
+    {
+        StartCoroutine(GracePeriod());
+    }
+
+    IEnumerator<WaitForSeconds> GracePeriod()
+    {
+        yield return new WaitForSeconds(3);
+        OpenBox();
     }
 }

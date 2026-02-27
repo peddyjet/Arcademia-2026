@@ -1,4 +1,4 @@
-﻿using System;
+﻿using std = System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,6 +31,7 @@ namespace Assets.Scripts.Enemies
             Rare = 1,
         }
 
+        [std::Serializable]
         public struct EnemyWeight
         {
             public EnemyType Type;
