@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: 80ea9b3be18d8f24fad226d0bcaf1187
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9021346714382775203
+    second: redscreen_0
+  - first:
+      213: -3812934354532087480
+    second: redscreen_1
+  - first:
+      213: -1457784413145078810
+    second: redscreen_2
+  - first:
+      213: 2867072443773852852
+    second: redscreen_3
+  - first:
+      213: -2361863545431925261
+    second: redscreen_4
+  - first:
+      213: -6426896666470540580
+    second: redscreen_5
+  - first:
+      213: 6569736552321224249
+    second: redscreen_6
+  - first:
+      213: 800574166570457223
+    second: redscreen_7
+  - first:
+      213: 5231304516676129781
+    second: redscreen_8
+  - first:
+      213: 4088397989341485342
+    second: redscreen_9
+  - first:
+      213: -3571150900177377562
+    second: redscreen_10
+  - first:
+      213: 421346190730060210
+    second: redscreen_11
+  - first:
+      213: -7105873093063857989
+    second: redscreen_12
+  - first:
+      213: -5704624611928344302
+    second: redscreen_13
+  - first:
+      213: -7966453015798577885
+    second: redscreen_14
+  - first:
+      213: 6832446568806713652
+    second: redscreen_15
+  - first:
+      213: 3467332050669554951
+    second: redscreen_16
+  - first:
+      213: 7695201030371617206
+    second: redscreen_17
+  - first:
+      213: 460806443961691956
+    second: redscreen_18
+  - first:
+      213: 4495464412750950192
+    second: redscreen_19
+  - first:
+      213: -8222356401379920659
+    second: redscreen_20
+  - first:
+      213: -1920335713843039930
+    second: redscreen_21
+  - first:
+      213: -4741587568937516193
+    second: redscreen_22
+  - first:
+      213: 5702875340105230839
+    second: redscreen_23
+  - first:
+      213: -3704884085961351532
+    second: redscreen_24
+  - first:
+      213: -4178207857730155385
+    second: redscreen_25
+  - first:
+      213: -9166721125878780001
+    second: redscreen_26
+  - first:
+      213: -1989432371471073584
+    second: redscreen_27
+  - first:
+      213: 5593004860222110740
+    second: redscreen_28
+  - first:
+      213: 6886703084578851397
+    second: redscreen_29
+  - first:
+      213: 7203225669146121646
+    second: redscreen_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: redscreen_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 856
+        width: 831
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5cc39dd5fcbdc280800000000000000
+      internalID: -9021346714382775203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_1
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1519
+        width: 40
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8494b36086cb51bc0800000000000000
+      internalID: -3812934354532087480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_2
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 1479
+        width: 75
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e3e267ccc8e4cbe0800000000000000
+      internalID: -1457784413145078810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_3
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 1499
+        width: 60
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bc937c7233e9c720800000000000000
+      internalID: 2867072443773852852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_4
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 1513
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fdd59e7e99f83fd0800000000000000
+      internalID: -2361863545431925261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_5
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 1488
+        width: 57
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cda91e278831fc6a0800000000000000
+      internalID: -6426896666470540580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_6
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 1466
+        width: 59
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e810d16946c2b50800000000000000
+      internalID: 6569736552321224249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_7
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1507
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78859ce76f53c1b00800000000000000
+      internalID: 800574166570457223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_8
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1507
+        width: 37
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f39064cdb3599840800000000000000
+      internalID: 5231304516676129781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_9
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1492
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e19de1f5f48ecb830800000000000000
+      internalID: 4088397989341485342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_10
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 1385
+        width: 66
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e66c935d29b07ec0800000000000000
+      internalID: -3571150900177377562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_11
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 1466
+        width: 214
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1ede9c02ce8d500800000000000000
+      internalID: 421346190730060210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_12
+      rect:
+        serializedVersion: 2
+        x: 2073
+        y: 929
+        width: 743
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb82ce4021ed26d90800000000000000
+      internalID: -7105873093063857989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_13
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1412
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2197f0dc32a15d0b0800000000000000
+      internalID: -5704624611928344302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_14
+      rect:
+        serializedVersion: 2
+        x: 2424
+        y: 911
+        width: 53
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3258c71b039717190800000000000000
+      internalID: -7966453015798577885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_15
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 891
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4398f8854f9b1de50800000000000000
+      internalID: 6832446568806713652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_16
+      rect:
+        serializedVersion: 2
+        x: 2735
+        y: 868
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70d4c7e11207e1030800000000000000
+      internalID: 3467332050669554951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_17
+      rect:
+        serializedVersion: 2
+        x: 2614
+        y: 768
+        width: 59
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b92582f098daca60800000000000000
+      internalID: 7695201030371617206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_18
+      rect:
+        serializedVersion: 2
+        x: 2772
+        y: 761
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f2c82f40d156600800000000000000
+      internalID: 460806443961691956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_19
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 763
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03f2e6eb019136e30800000000000000
+      internalID: 4495464412750950192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_20
+      rect:
+        serializedVersion: 2
+        x: 2811
+        y: 741
+        width: 5
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de43717ba6254ed80800000000000000
+      internalID: -8222356401379920659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_21
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 696
+        width: 27
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 641b3e6b7d89955e0800000000000000
+      internalID: -1920335713843039930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 585
+        width: 45
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5342126a3f723eb0800000000000000
+      internalID: -4741587568937516193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1107
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f9ae4d18eea42f40800000000000000
+      internalID: 5702875340105230839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_24
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 0
+        width: 907
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49e964a9d8b959cc0800000000000000
+      internalID: -3704884085961351532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_25
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 0
+        width: 182
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c8f3a27160406c0800000000000000
+      internalID: -4178207857730155385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_26
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 56
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9f2de014b349c080800000000000000
+      internalID: -9166721125878780001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_27
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 0
+        width: 31
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0debdc17ccd1464e0800000000000000
+      internalID: -1989432371471073584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_28
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 0
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c729099485e9d40800000000000000
+      internalID: 5593004860222110740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_29
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 0
+        width: 45
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ac8e5d7fb729f50800000000000000
+      internalID: 6886703084578851397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redscreen_30
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 0
+        width: 229
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea51e6ee49ff6f360800000000000000
+      internalID: 7203225669146121646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      redscreen_0: -9021346714382775203
+      redscreen_1: -3812934354532087480
+      redscreen_10: -3571150900177377562
+      redscreen_11: 421346190730060210
+      redscreen_12: -7105873093063857989
+      redscreen_13: -5704624611928344302
+      redscreen_14: -7966453015798577885
+      redscreen_15: 6832446568806713652
+      redscreen_16: 3467332050669554951
+      redscreen_17: 7695201030371617206
+      redscreen_18: 460806443961691956
+      redscreen_19: 4495464412750950192
+      redscreen_2: -1457784413145078810
+      redscreen_20: -8222356401379920659
+      redscreen_21: -1920335713843039930
+      redscreen_22: -4741587568937516193
+      redscreen_23: 5702875340105230839
+      redscreen_24: -3704884085961351532
+      redscreen_25: -4178207857730155385
+      redscreen_26: -9166721125878780001
+      redscreen_27: -1989432371471073584
+      redscreen_28: 5593004860222110740
+      redscreen_29: 6886703084578851397
+      redscreen_3: 2867072443773852852
+      redscreen_30: 7203225669146121646
+      redscreen_4: -2361863545431925261
+      redscreen_5: -6426896666470540580
+      redscreen_6: 6569736552321224249
+      redscreen_7: 800574166570457223
+      redscreen_8: 5231304516676129781
+      redscreen_9: 4088397989341485342
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
