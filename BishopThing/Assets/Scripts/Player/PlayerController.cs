@@ -123,4 +123,6 @@ public class PlayerController : MonoBehaviour
             OnBlessingUsed?.Invoke();
         }
     }
+
+    public void Teleport(Vector3 position) => transform.position = position;
 }

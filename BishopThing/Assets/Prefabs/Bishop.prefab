@@ -390,7 +390,7 @@ MonoBehaviour:
   _maxHealth: 100
   _maxBlessings: 5
   _startingBlessings: 2
-  _iframes: 0.3
+  _iframes: 1
   _damageAmount: 15
   _attackCooldown: 0.5
   _healthBar: {fileID: 0}
@@ -459,8 +459,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 1.2849998
+  m_Offset: {x: -0.07396057, y: 0}
+  m_Radius: 0.8905421
 --- !u!114 &6439435867221536630
 MonoBehaviour:
   m_ObjectHideFlags: 0
