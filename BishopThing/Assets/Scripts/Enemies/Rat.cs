@@ -75,7 +75,7 @@ public class Rat : Enemy
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "PlayerWeapon")
         {
             _currentHealth -= _playerTransform.GetComponent<PlayerController>().Damage;
             if (_currentHealth <= 0)

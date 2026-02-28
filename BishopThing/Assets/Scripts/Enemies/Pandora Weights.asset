@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pandora Weights
   m_EditorClassIdentifier: 
   _enemyWeights:
-  - Type: 1
+  - Type: 2
     Weight: 4
     enemyPrefab: {fileID: 3461800891609252440, guid: 3c35d6411ac8f9e45a0ab033c8ee69f1, type: 3}
   - Type: 4

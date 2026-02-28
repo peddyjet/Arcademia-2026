@@ -2,15 +2,15 @@ using Assets.Scripts.Enemies;
 using TMPro;
 using UnityEngine;
 
-public class Spider : Enemy
+public class Ghost : Enemy
 {
     [SerializeField] private float _speed = 5f;
     [SerializeField] private float _accelerationSpeed = 5f;
     [SerializeField] private float _damage = 5f;
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private float _maxHealth = 20f;
-    [SerializeField][Min(0)] private float _minVariance = 1.0f;
-    [SerializeField][Min(0)] private float _maxVarience = 1.0f;
+    [SerializeField] [Min(0)] private float _minVariance = 1.0f;
+    [SerializeField] [Min(0)] private float _maxVarience = 1.0f;
     [SerializeField] private float _damageIntensity = 1f;
 
     private float _currentHealth;
@@ -45,19 +45,12 @@ public class Spider : Enemy
                 targetVelocity,
                 _accelerationSpeed * Time.fixedDeltaTime
             );
-
-            // Rotate toward player
-            float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg + 90;
-
-            _rb.MoveRotation(angle);
         }
         else _playerTransform = FindFirstObjectByType<PandorasBox>().transform;
 
     }
 
-
-
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" && tag == "Enemy")
         {
@@ -66,10 +59,12 @@ public class Spider : Enemy
             return;
         }
     }
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "PlayerWeapon")
+        
+
+        if (collision.gameObject.tag == "PlayerWeapon" && transform.position != _playerTransform.position)
         {
             _currentHealth -= _playerTransform.GetComponent<PlayerController>().Damage;
             if (_currentHealth <= 0)
