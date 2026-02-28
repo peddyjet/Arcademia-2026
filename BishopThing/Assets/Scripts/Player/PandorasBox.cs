@@ -22,9 +22,9 @@ public class PandorasBox : MonoBehaviour
     [SerializeField][Min(0)] private float _upperBoundVelocity = 5;
     [SerializeField][Range(0f,2f)] private float _offset = 0.3f;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.TryGetComponent(out ICollectible collectible))
+        if (other.gameObject.TryGetComponent(out ICollectible collectible))
         {
             AddCollectible(collectible);
         }
@@ -47,6 +47,7 @@ public class PandorasBox : MonoBehaviour
         collectibles = new ICollectible[] { collectible };
 
         // TODO: Add Logic to open Pandora's Box every time a collectible is added.
+        OpenBox();
     }
 
     public void OpenBox(int iterations = 1)

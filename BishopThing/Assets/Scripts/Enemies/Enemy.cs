@@ -12,13 +12,15 @@ namespace Assets.Scripts.Enemies
     {
         [SerializeField] protected float _iframes = 0.5f;
 
+        protected virtual void OnBlessing()
+        {
+            var rb = GetComponent<Rigidbody2D>();
+            rb.AddForce(new Vector2(UnityEngine.Random.Range(-3f, 3f), UnityEngine.Random.Range(-3f, 3f)).normalized * 5f, ForceMode2D.Impulse);
+        }
+
         protected virtual void Start()
         {
-            FindFirstObjectByType<PlayerController>().OnBlessingUsed += () =>
-            {
-                var rb = GetComponent<Rigidbody2D>();
-                rb.AddForce(new Vector2(UnityEngine.Random.Range(-3f, 3f), UnityEngine.Random.Range(-3f, 3f)).normalized * 5f, ForceMode2D.Impulse);
-            };
+            FindFirstObjectByType<PlayerController>().OnBlessingUsed += OnBlessing;
             StartCoroutine(GracePeriod());
         }
 

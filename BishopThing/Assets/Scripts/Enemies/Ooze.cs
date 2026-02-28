@@ -38,12 +38,12 @@ public class Ooze : Enemy
             Vector2 directionToPlayer =
                 (_playerTransform.position - transform.position).normalized;
 
-            Vector2 targetVelocity = directionToPlayer * _speed;
+            Vector2 targetVelocity = directionToPlayer * (_speed + _currentVariance);
 
             _rb.linearVelocity = Vector2.Lerp(
                 _rb.linearVelocity,
                 targetVelocity,
-                (_accelerationSpeed + _currentVariance) * Time.fixedDeltaTime
+                _accelerationSpeed * Time.fixedDeltaTime
             );
         }
         else _playerTransform = FindFirstObjectByType<PandorasBox>().transform;
