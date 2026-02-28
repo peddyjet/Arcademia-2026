@@ -2,6 +2,9 @@ using Assets.Scripts.Enemies;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using Assets.Scripts.Items;
+using System.Linq;
+using TMPro;
 
 /// <summary>
 /// Handles the logic of collecting items and opening Pandora's Box. The box will open every time a new item is collected, resulting in a swarm of enemies.
@@ -9,9 +12,8 @@ using UnityEngine;
 public class PandorasBox : MonoBehaviour
 {
 
-    private ICollectible[] collectibles;
+    private Dictionary<IPotion, int> potions;
 
-    public ICollectible[] Collectibles => collectibles;
     [Header("Pandora's Box Settings")]
     [SerializeField] private PandoraWeights _pandoraWeights;
     [SerializeField] private Animator _animator;
@@ -31,21 +33,28 @@ public class PandorasBox : MonoBehaviour
         }
     }
 
+    public void UpdatePotionUI()
+    {
+        var links = FindObjectsByType<UILink>(FindObjectsSortMode.None);
+        foreach (var valuePair in potions)
+        {
+            links.First(i => i.UUID == valuePair.Key.TargetUUID).GetComponent<TextMeshProUGUI>().text = valuePair.Value.ToString();
+        }
+    }
+
     public void AddCollectible(ICollectible collectible)
     {
         // Declare to collectible that it has been collected, so it can do its own logic (e.g. disappear, play sound, etc.)
         collectible.Collect();
          
-        // Add collectible to inventory
-        if (collectibles != null)
+        // Add potions to inventory
+        if(collectible.GetType().GetInterfaces().Any(i => i.Name == nameof(IPotion)))
         {
-            var structure = new ICollectible[collectibles.Length + 1];
-            Array.Copy(collectibles, structure, collectibles.Length);
-            structure[structure.Length - 1] = collectible;
-            return;
+            if (!potions.ContainsKey(collectible as IPotion))
+                potions.Add(collectible as IPotion, 1);
+            else potions[collectible as IPotion] += 1;
+            UpdatePotionUI();
         }
-
-        collectibles = new ICollectible[] { collectible };
 
         // TODO: Add Logic to open Pandora's Box every time a collectible is added.
         OpenBox(message: collectible.Message);
@@ -90,6 +99,6 @@ public class PandorasBox : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         
-        OpenBox(message: "Go fuck yourself");
+        OpenBox();
     }
 }
