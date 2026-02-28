@@ -4,7 +4,7 @@ public class BookTrap : MonoBehaviour, ICollectible
 {
     [SerializeField] private int _extremity = 1;
 
-    public string Message => "+ Irrelevant Book";
+    public string Message => "+ Interesting Book";
 
     public void Collect()
     {

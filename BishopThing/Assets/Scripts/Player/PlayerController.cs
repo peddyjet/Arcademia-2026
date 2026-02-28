@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(PandorasBox))]
 public class PlayerController : MonoBehaviour
@@ -32,9 +33,11 @@ public class PlayerController : MonoBehaviour
     private Vector2 _directionOfTravel;
     private std::DateTime _lastAttackTime = std::DateTime.Now;
     private bool _isMoving;
+    private float _defaultDamage;
 
     private void Start()
     {
+        _defaultDamage = _damageAmount;
         _currentHealth = _maxHealth;
         CurrentBlessings = _startingBlessings;
         OnBlessingUsed += () =>
@@ -141,4 +144,16 @@ public class PlayerController : MonoBehaviour
 
     public void Teleport(Vector3 position) => transform.position = position;
     public void Heal(float amount) => _currentHealth = Mathf.Min(_currentHealth + amount, _maxHealth);
+
+    public void Buff(float amount, float duration)
+    {
+        IEnumerator Coroutine()
+        {
+            _damageAmount = amount;
+            yield return new WaitForSeconds(duration);
+            _damageAmount = _defaultDamage;
+        }
+
+        StartCoroutine(Coroutine());
+    }
 }

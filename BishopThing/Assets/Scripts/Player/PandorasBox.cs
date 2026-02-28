@@ -34,11 +34,6 @@ public class PandorasBox : MonoBehaviour
         }
     }
 
-    public void UseHealPotionHandler(InputAction.CallbackContext context) 
-    {
-        if (context.performed) UsePotion("1");
-    }
-
     public void UsePotion(string uuid) 
     {
         if(!potions.ContainsKey(uuid) || potions[uuid].Count == 0)
