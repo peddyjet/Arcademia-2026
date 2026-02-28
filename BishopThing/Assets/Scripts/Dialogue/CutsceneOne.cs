@@ -40,7 +40,7 @@ class CutsceneOne : MonoBehaviour
         lines.Add(new DialogueLine { speaker = "Goblin", text = "You can attack enemies with SPACEBAR, move with WASD, I assume you've played a game before?" });
         lines.Add(new DialogueLine { speaker = "Goblin", text = "E to interact with things.. blah blah. if you don't know this drill go start with Minecraft!" });
         lines.Add(new DialogueLine { speaker = "Goblin", text = "Good luck, you'll need it!"});
-        lines.Add(new DialogueLine { speaker = "Bishop", text = "EURGH! My dinner will get cold!"});
+        lines.Add(new DialogueLine { speaker = "Bishop", text = "EURGH! My Uber Eats driver is due anytime now!"});
 
         currentLineIndex = 0;
     }
@@ -62,7 +62,7 @@ class CutsceneOne : MonoBehaviour
 
     public void GoToLevelOne()
     {
-        // TODO: CHANGE THIS SHIZ! 4 = Playground
-        SceneManager.LoadScene(4);
+        // CHANGE this if the first lvl's index changes at all
+        SceneManager.LoadScene(1);
     }
 }

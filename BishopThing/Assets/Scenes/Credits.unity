@@ -709,7 +709,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Credit to Adwitr for health bar asset pack (you're famous now buddy)
+  m_text: 'Credit to Adwitr for health bar asset pack (you''re famous now buddy)
+
+
+    Music
+    by Kevin MacLeod (incompetech.com)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1cdf5d9db460b334a80107176c16e691, type: 2}
   m_sharedMaterial: {fileID: 2404095147301752611, guid: 1cdf5d9db460b334a80107176c16e691, type: 2}
