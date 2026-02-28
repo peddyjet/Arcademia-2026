@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
             {
                 OnBlessingUsed?.Invoke();
             }
-            else SceneLoader.LoadSceneIdxStatic(0);
+            else SceneLoader.LoadSceneIdxStatic(5);
             return;
         }
         StartCoroutine(GiveIFrames(_iframes));
