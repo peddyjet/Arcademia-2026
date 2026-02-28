@@ -8,8 +8,11 @@ public class Ooze : Enemy
     [SerializeField] private float _damage = 5f;
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private float _maxHealth = 20f;
+    [SerializeField] [Min(0)] private float _minVariance = 1.0f;
+    [SerializeField] [Min(0)] private float _maxVarience = 1.0f;
 
     private float _currentHealth;
+    private float _currentVariance;
 
     private Transform _playerTransform;
 
@@ -19,6 +22,7 @@ public class Ooze : Enemy
         base.Start();
         _playerTransform = FindFirstObjectByType<PandorasBox>().transform;
         _currentHealth = _maxHealth;
+        _currentVariance = Random.Range(-_minVariance, _maxVarience);
     }
 
     private void FixedUpdate()
@@ -33,7 +37,7 @@ public class Ooze : Enemy
             _rb.linearVelocity = Vector2.Lerp(
                 _rb.linearVelocity,
                 targetVelocity,
-                _accelerationSpeed * Time.fixedDeltaTime
+                (_accelerationSpeed + _currentVariance) * Time.fixedDeltaTime
             );
         }
     }

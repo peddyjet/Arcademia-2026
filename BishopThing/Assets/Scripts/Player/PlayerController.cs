@@ -50,7 +50,12 @@ public class PlayerController : MonoBehaviour
     {
         if(input.performed)
             _directionOfTravel = input.ReadValue<Vector2>();
-        _isMoving = input.performed;
+        
+        if(input.performed != _isMoving)
+        {
+            GetComponent<Animator>().SetBool("isWalking", input.performed);
+            _isMoving = input.performed;
+        }
     }
 
     private void Update()
@@ -69,6 +74,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             _rb.linearVelocity = Vector2.Lerp(_rb.linearVelocity, _directionOfTravel * _speed, _accelerationSpeed * Time.deltaTime);
+            _sprite.transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(_directionOfTravel.y, _directionOfTravel.x) * Mathf.Rad2Deg)-90);
         }
     }
 

@@ -329,7 +329,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1746744401}
@@ -378,7 +378,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 3179908136262906254, guid: 2a29b7f637a4d804ca8c2c4cb345f6d4, type: 3}
+  m_Sprite: {fileID: -827016883341640748, guid: 9c3adcd79e5e7ca4bb0acc87b9f45779, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2484,6 +2484,7 @@ GameObject:
   - component: {fileID: 1746744397}
   - component: {fileID: 1746744402}
   - component: {fileID: 1746744403}
+  - component: {fileID: 1746744404}
   m_Layer: 0
   m_Name: penguin_z0
   m_TagString: Player
@@ -2602,19 +2603,7 @@ MonoBehaviour:
     m_ActionId: 6f382f3a-01e4-49b1-a98f-99ae1317ac09
     m_ActionName: 'Player/Throw[/Keyboard/space]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1746744398}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: Bless
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: fe0adb7f-84de-4954-8c96-62841e477c96
     m_ActionName: 'Player/Bless[/Keyboard/b]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -2693,6 +2682,28 @@ MonoBehaviour:
   _lowerBoundVelocity: 1
   _upperBoundVelocity: 5
   _offset: 1.145
+--- !u!95 &1746744404
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746744396}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 00258fba2e3db3b41984d3900e7a3886, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2046600478
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7188045719223278708}
   - component: {fileID: 6474166914639425906}
   - component: {fileID: 3461800891609252440}
+  - component: {fileID: 5116351243809307785}
   m_Layer: 0
   m_Name: Ooze
   m_TagString: Untagged
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -4729936576093098089, guid: 77360fb6dc52fcb499b7ce440708216f, type: 3}
+  m_Sprite: {fileID: 368543389579951487, guid: 99655552ab8691e4bb3846a1e6986626, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -170,3 +171,28 @@ MonoBehaviour:
   _accelerationSpeed: 1
   _damage: 8
   _rb: {fileID: 6474166914639425906}
+  _maxHealth: 20
+  _minVariance: 1.5
+  _maxVarience: 1.5
+--- !u!95 &5116351243809307785
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4143123049608545746}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7e15d4db23bbbc24581b3a6f1d2ec65c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
