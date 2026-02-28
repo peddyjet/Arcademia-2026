@@ -556,16 +556,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'There are no settings. What, you thought
-
-    this was a hard game to
-    run? Path Tracing''s coming in the next update.
-
-
-    If you need to turn settings
-    down for more frames
-
-    I think you should take a trip to Poundland.'
+  m_text: "There are no settings. \n\nWhat, you thoughtthis was a hard game to run?\nRay
+    Tracing is coming in the next update.\n\nIf you need to adjust settings due to
+    performance\nI think you should take a trip to Poundland."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1cdf5d9db460b334a80107176c16e691, type: 2}
   m_sharedMaterial: {fileID: 2404095147301752611, guid: 1cdf5d9db460b334a80107176c16e691, type: 2}

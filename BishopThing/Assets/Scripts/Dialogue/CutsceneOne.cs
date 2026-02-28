@@ -28,13 +28,13 @@ class CutsceneOne : MonoBehaviour
         lines.Clear();
         lines.Add(new DialogueLine { speaker = "Bishop", text = "HEY! Stop that, shoo! Go elsewhere." });
         lines.Add(new DialogueLine { speaker = "Teenagers", text = "Screw you old man!" });
-        lines.Add(new DialogueLine { speaker = "Bishop", text = "Go now before the police are called!" });
-        lines.Add(new DialogueLine { speaker = "Notice", text = "*The teenagers leave the premises...*"});
+        lines.Add(new DialogueLine { speaker = "Bishop", text = "Go now before the I phone the police!" });
+        lines.Add(new DialogueLine { speaker = "Notice", text = "*The trouble makers leave the premises...*"});
         lines.Add(new DialogueLine { speaker = "Bishop", text = "Phew!" });
         lines.Add(new DialogueLine { speaker = "Bishop", text = "Hmmm, something smells off" });
-        lines.Add(new DialogueLine { speaker = "Bishop", text = "What in the Jim Jones was that?" });
+        lines.Add(new DialogueLine { speaker = "Bishop", text = "What in the Jimothy Jones was that?" });
         lines.Add(new DialogueLine { speaker = "Goblin", text = "HAHAHAHAHA, eat my curse!" });
-        lines.Add(new DialogueLine { speaker = "Bishop", text = "What is this mysterious box that I seem to of found myself in possession of?" });
+        lines.Add(new DialogueLine { speaker = "Bishop", text = "What on Earth is this mysterious box?" });
         lines.Add(new DialogueLine { speaker = "Goblin", text = "It's Pandoras Box! You're cursed, fool!" });
         lines.Add(new DialogueLine { speaker = "Goblin", text = "You must collect eight keys in order to open the box and be free from the curse!" });
         lines.Add(new DialogueLine { speaker = "Goblin", text = "You can attack enemies with SPACEBAR, move with WASD, I assume you've played a game before?" });
