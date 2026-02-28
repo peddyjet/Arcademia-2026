@@ -119,6 +119,89 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &38942644 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4986234453853152187, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+  m_PrefabInstance: {fileID: 64345194}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &64345194
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207919677708642640, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207919677708642640, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 592626799}
+    - target: {fileID: 7184291614181192398, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084501458917125338, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165147109719658166, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_Name
+      value: Pandora
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165147109719658166, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6439435867221536630, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
 --- !u!1001 &72977091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41788,6 +41871,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6439435867221536630, guid: eefeb11c853e8b34e841be0eddaf4774, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 38942644}
     - target: {fileID: 9165147109719658166, guid: eefeb11c853e8b34e841be0eddaf4774, type: 3}
       propertyPath: m_Name
       value: Bishop
@@ -57277,3 +57364,4 @@ SceneRoots:
   - {fileID: 526597157}
   - {fileID: 1974302623}
   - {fileID: 1191919239}
+  - {fileID: 64345194}
