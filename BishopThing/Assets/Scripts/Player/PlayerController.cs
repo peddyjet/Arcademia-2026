@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(PandorasBox))]
 public class PlayerController : MonoBehaviour
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour
     private int _currentBlessings;
     public int CurrentBlessings { get => _currentBlessings; set { _currentBlessings = Mathf.Min(value, _maxBlessings); } }
     private float _currentHealth;
-    public event std::Action OnBlessingUsed;
+    public UnityEvent OnBlessingUsed;
     public float Damage => _damageAmount;
 
     private Vector2 _directionOfTravel;
@@ -49,7 +50,7 @@ public class PlayerController : MonoBehaviour
         _defaultDamage = _damageAmount;
         _currentHealth = _maxHealth;
         CurrentBlessings = _startingBlessings;
-        OnBlessingUsed += () =>
+        OnBlessingUsed.AddListener(() =>
         {
             // audio stuff
             bishopSource.Stop();
@@ -59,7 +60,7 @@ public class PlayerController : MonoBehaviour
             _currentHealth = Random.Range(_maxHealth * 0.5f, _maxHealth);
             GetComponent<PandorasBox>().OpenBox(Random.Range(11, 20) / 10);
             StartCoroutine(GiveIFrames(_iframes));
-        };
+        });
     }
 
     public void OnPlayerMove(InputAction.CallbackContext input)

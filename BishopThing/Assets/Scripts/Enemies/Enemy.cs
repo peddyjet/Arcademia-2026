@@ -20,7 +20,7 @@ namespace Assets.Scripts.Enemies
 
         protected virtual void Start()
         {
-            FindFirstObjectByType<PlayerController>().OnBlessingUsed += OnBlessing;
+            FindFirstObjectByType<PlayerController>().OnBlessingUsed.AddListener(OnBlessing);
             StartCoroutine(GracePeriod());
         }
 

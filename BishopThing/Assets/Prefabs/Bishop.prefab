@@ -435,7 +435,7 @@ MonoBehaviour:
   _maxHealth: 100
   _maxBlessings: 5
   _startingBlessings: 2
-  _iframes: 0.25
+  _iframes: 0.5
   _damageAmount: 15
   _attackCooldown: 0.5
   _healthBar: {fileID: 0}
@@ -525,9 +525,9 @@ MonoBehaviour:
   _pandoraWeights: {fileID: 11400000, guid: 29a9afd4bb97c444da63c28daa3a082b, type: 2}
   _animator: {fileID: 0}
   _pandoraCanvas: {fileID: 0}
-  _lowerBoundSpawn: 3
-  _upperBoundSpawn: 6
-  _lowerBoundVelocity: 3
+  _lowerBoundSpawn: 2
+  _upperBoundSpawn: 4
+  _lowerBoundVelocity: 4
   _upperBoundVelocity: 7
   _offset: 1.145
 --- !u!95 &4986234453853152187
