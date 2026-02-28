@@ -14,6 +14,8 @@ public class PandorasBox : MonoBehaviour
     public ICollectible[] Collectibles => collectibles;
     [Header("Pandora's Box Settings")]
     [SerializeField] private PandoraWeights _pandoraWeights;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private PandorasCanvas _pandoraCanvas;
 
     [Header("Hyperparameters")]
     [SerializeField][Min(0)] private int _lowerBoundSpawn = 1;
@@ -21,7 +23,6 @@ public class PandorasBox : MonoBehaviour
     [SerializeField][Min(0)] private float _lowerBoundVelocity = 1;
     [SerializeField][Min(0)] private float _upperBoundVelocity = 5;
     [SerializeField][Range(0f,2f)] private float _offset = 0.3f;
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.TryGetComponent(out ICollectible collectible))
@@ -47,27 +48,37 @@ public class PandorasBox : MonoBehaviour
         collectibles = new ICollectible[] { collectible };
 
         // TODO: Add Logic to open Pandora's Box every time a collectible is added.
-        OpenBox();
+        OpenBox(message: collectible.Message);
     }
 
-    public void OpenBox(int iterations = 1)
+    public void OpenBox(int iterations = 1, string message = "")
     {
-        var numberToSpawn = UnityEngine.Random.Range(_lowerBoundSpawn, _upperBoundSpawn + 1);
-        var selectedEnemies = new List<Enemy>();
-        var enemies = _pandoraWeights.GetRandomEnemies(numberToSpawn, PandoraWeights.EnemyType.None);
-        foreach (var enemy in enemies)
-        {
-            var obj = Instantiate(enemy.gameObject, transform.position + new Vector3(UnityEngine.Random.Range(-_offset, _offset),
-                UnityEngine.Random.Range(-_offset, _offset), 0), Quaternion.identity);
-            obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(UnityEngine.Random.Range(-_lowerBoundVelocity, _upperBoundVelocity),
-                UnityEngine.Random.Range(-_lowerBoundVelocity, _upperBoundVelocity)), ForceMode2D.Impulse);
+        AnimateOpen();
 
+        if (message != "")
+            _pandoraCanvas.ShowMessage(message);
+
+        for (int i = 0; i < iterations; i++)
+        {
+            var numberToSpawn = UnityEngine.Random.Range(_lowerBoundSpawn, _upperBoundSpawn + 1);
+            var selectedEnemies = new List<Enemy>();
+            var enemies = _pandoraWeights.GetRandomEnemies(numberToSpawn, PandoraWeights.EnemyType.None);
+            foreach (var enemy in enemies)
+            {
+                var obj = Instantiate(enemy.gameObject, transform.position + new Vector3(UnityEngine.Random.Range(-_offset, _offset),
+                    UnityEngine.Random.Range(-_offset, _offset), 0), Quaternion.identity);
+                obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(UnityEngine.Random.Range(-_lowerBoundVelocity, _upperBoundVelocity),
+                    UnityEngine.Random.Range(-_lowerBoundVelocity, _upperBoundVelocity)), ForceMode2D.Impulse);
+
+            }
         }
 
-        if (iterations >= 1)
-        {
-            OpenBox(iterations - 1);
-        }
+        
+    }
+
+    private void AnimateOpen()
+    {
+        _animator.SetTrigger("Opening");
     }
 
     void Start()
@@ -78,6 +89,7 @@ public class PandorasBox : MonoBehaviour
     IEnumerator<WaitForSeconds> GracePeriod()
     {
         yield return new WaitForSeconds(3);
-        OpenBox();
+        
+        OpenBox(message: "Go fuck yourself");
     }
 }
