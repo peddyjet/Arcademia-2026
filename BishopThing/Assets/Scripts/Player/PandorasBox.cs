@@ -14,6 +14,8 @@ public class PandorasBox : MonoBehaviour
     public ICollectible[] Collectibles => collectibles;
     [Header("Pandora's Box Settings")]
     [SerializeField] private PandoraWeights _pandoraWeights;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private PandorasCanvas _pandoraCanvas;
 
     [Header("Hyperparameters")]
     [SerializeField][Min(0)] private int _lowerBoundSpawn = 1;
@@ -21,7 +23,6 @@ public class PandorasBox : MonoBehaviour
     [SerializeField][Min(0)] private float _lowerBoundVelocity = 1;
     [SerializeField][Min(0)] private float _upperBoundVelocity = 5;
     [SerializeField][Range(0f,2f)] private float _offset = 0.3f;
-    [SerializeField]private Animator _animator;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.TryGetComponent(out ICollectible collectible))
@@ -47,12 +48,15 @@ public class PandorasBox : MonoBehaviour
         collectibles = new ICollectible[] { collectible };
 
         // TODO: Add Logic to open Pandora's Box every time a collectible is added.
-        OpenBox();
+        OpenBox(message: collectible.Message);
     }
 
-    public void OpenBox(int iterations = 1)
+    public void OpenBox(int iterations = 1, string message = "")
     {
         AnimateOpen();
+
+        if (message != "")
+            _pandoraCanvas.ShowMessage(message);
 
         for (int i = 0; i < iterations; i++)
         {
@@ -86,6 +90,6 @@ public class PandorasBox : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         
-        OpenBox();
+        OpenBox(message: "Go fuck yourself");
     }
 }
