@@ -43,6 +43,8 @@ public class Rat : Enemy
             _direction = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
 
             if (_direction == Vector2.zero) _direction = Vector2.one;
+
+            _lastUpdate = std::DateTime.Now;
         }
 
         Vector2 targetVelocity = _direction * (_speed + _currentVariance);
@@ -52,6 +54,11 @@ public class Rat : Enemy
             targetVelocity,
             _accelerationSpeed * Time.fixedDeltaTime
         );
+
+        // Rotate toward player
+        float angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg - 90;
+
+        _rb.MoveRotation(angle);
     }
 
 

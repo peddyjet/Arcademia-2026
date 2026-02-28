@@ -28,7 +28,7 @@ MonoBehaviour:
   - Type: 8
     Weight: 1
     enemyPrefab: {fileID: 6383677150691372968, guid: 0389097d6cf80084abe18e1358386130, type: 3}
-  - Type: 1
+  - Type: 2
     Weight: 4
     enemyPrefab: {fileID: 3873452925798732727, guid: 6c965d8a1b0a4a6499ede5ed88a1d3ee, type: 3}
   - Type: 4
