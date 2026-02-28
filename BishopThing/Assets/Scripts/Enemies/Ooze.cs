@@ -1,4 +1,5 @@
 using Assets.Scripts.Enemies;
+using TMPro;
 using UnityEngine;
 
 public class Ooze : Enemy
@@ -10,9 +11,12 @@ public class Ooze : Enemy
     [SerializeField] private float _maxHealth = 20f;
     [SerializeField] [Min(0)] private float _minVariance = 1.0f;
     [SerializeField] [Min(0)] private float _maxVarience = 1.0f;
+    [SerializeField] private float _damageIntensity = 1f;
 
     private float _currentHealth;
     private float _currentVariance;
+    private SpriteRenderer _spriteRenderer;
+    private Color _originColor;
 
     private Transform _playerTransform;
 
@@ -23,6 +27,8 @@ public class Ooze : Enemy
         _playerTransform = FindFirstObjectByType<PandorasBox>().transform;
         _currentHealth = _maxHealth;
         _currentVariance = Random.Range(-_minVariance, _maxVarience);
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _originColor = _spriteRenderer.color;
     }
 
     private void FixedUpdate()
@@ -40,13 +46,15 @@ public class Ooze : Enemy
                 (_accelerationSpeed + _currentVariance) * Time.fixedDeltaTime
             );
         }
+        else _playerTransform = FindFirstObjectByType<PandorasBox>().transform;
+
     }
 
 
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && tag == "Enemy")
         {
             _playerTransform.GetComponent<PlayerController>().TakeDamage(_damage);
             StartCoroutine(GracePeriod());
@@ -65,6 +73,8 @@ public class Ooze : Enemy
             }
             else
             {
+                var normalised = Mathf.Clamp(_currentHealth / (_maxHealth + _damageIntensity), 0, 1);
+                _spriteRenderer.color = _originColor * new Color(normalised, normalised, normalised);
                 StartCoroutine(GracePeriod());
             }
         }

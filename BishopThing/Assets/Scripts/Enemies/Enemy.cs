@@ -25,8 +25,7 @@ namespace Assets.Scripts.Enemies
         protected IEnumerator<WaitForSeconds> GracePeriod()
         {
             var sprite = GetComponent<SpriteRenderer>();
-            var collider = GetComponent<Collider2D>();
-            collider.enabled = false;
+            tag = "Untagged";
             sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0.5f);
             yield return new WaitForSeconds(_iframes / 3);
             sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1f);
@@ -34,7 +33,7 @@ namespace Assets.Scripts.Enemies
             sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0.5f);
             yield return new WaitForSeconds(_iframes / 3);
             sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1f);
-            collider.enabled = true;
+            tag = "Enemy";
         }
     }
 }
