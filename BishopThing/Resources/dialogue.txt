@@ -20,4 +20,18 @@ Scene 1
 
 - *Mysterious Goblin appears*
 
-- Goblin: "HAHAHAHAHA, 
+- Goblin: "HAHAHAHAHA, eat my curse!"
+
+- Bishop: What is this mysterious box that I seem to of found myself in possession of?
+
+- Goblin: "It's Pandoras Box! You're cursed, fool!"
+
+- Goblin: "You must collect 8 keys in order to open the box and be free from the curse!"
+
+- Goblin: "You can attack enemies with SPACEBAR, move with WASD, I assume you've played a game before?"
+
+- Goblin: "E to interact with things.. blah blah if you don't know this drill go start with Minecraft!"
+
+- Bishop: ""
+
+- Goblin: "
