@@ -32,7 +32,7 @@ class CutsceneOne : MonoBehaviour
         lines.Add(new DialogueLine { speaker = "Notice", text = "*The trouble makers leave the premises...*"});
         lines.Add(new DialogueLine { speaker = "Bishop", text = "Phew!" });
         lines.Add(new DialogueLine { speaker = "Bishop", text = "Hmmm, something smells off" });
-        lines.Add(new DialogueLine { speaker = "Bishop", text = "What in the Jimothy Jones was that?" });
+        lines.Add(new DialogueLine { speaker = "Bishop", text = "What in the Jim Jones was that?" });
         lines.Add(new DialogueLine { speaker = "Goblin", text = "HAHAHAHAHA, eat my curse!" });
         lines.Add(new DialogueLine { speaker = "Bishop", text = "What on Earth is this mysterious box?" });
         lines.Add(new DialogueLine { speaker = "Goblin", text = "It's Pandoras Box! You're cursed, fool!" });
