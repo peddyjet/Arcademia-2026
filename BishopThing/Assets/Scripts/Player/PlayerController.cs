@@ -25,7 +25,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator _meleeAttackSlash;
     [SerializeField] private GameObject _meleeAttackGyrator;
 
-    public int CurrentBlessings { get; set; }
+    private int _currentBlessings;
+    public int CurrentBlessings { get => _currentBlessings; set { _currentBlessings = Mathf.Min(value, _maxBlessings); } }
     private float _currentHealth;
     public event std::Action OnBlessingUsed;
     public float Damage => _damageAmount;

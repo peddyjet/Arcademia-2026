@@ -365,15 +365,51 @@ MonoBehaviour:
     m_ActionId: 6f382f3a-01e4-49b1-a98f-99ae1317ac09
     m_ActionName: 'Player/Throw[/Keyboard/space]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2260850737702891817}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: UseHealPotionHandler
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 1
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: fe0adb7f-84de-4954-8c96-62841e477c96
     m_ActionName: 'Player/Bless[/Keyboard/b]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2260850737702891817}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: UseStrengthPotionHandler
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 8f055717-74b1-4cfb-9594-669a02aca3d1
     m_ActionName: 'Player/Strength[/Keyboard/x]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2260850737702891817}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: UseInvisibilityPotionHandler
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 0748d56d-57a6-4f76-b796-9cd9bd417f2e
     m_ActionName: 'Player/Invisible[/Keyboard/c]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -489,10 +525,10 @@ MonoBehaviour:
   _pandoraWeights: {fileID: 11400000, guid: 29a9afd4bb97c444da63c28daa3a082b, type: 2}
   _animator: {fileID: 0}
   _pandoraCanvas: {fileID: 0}
-  _lowerBoundSpawn: 1
-  _upperBoundSpawn: 5
-  _lowerBoundVelocity: 1
-  _upperBoundVelocity: 5
+  _lowerBoundSpawn: 3
+  _upperBoundSpawn: 6
+  _lowerBoundVelocity: 3
+  _upperBoundVelocity: 7
   _offset: 1.145
 --- !u!95 &4986234453853152187
 Animator:

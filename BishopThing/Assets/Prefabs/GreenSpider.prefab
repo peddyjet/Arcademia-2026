@@ -189,11 +189,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _iframes: 0.5
-  _speed: 3
+  _speed: 2
   _accelerationSpeed: 3
-  _damage: 1
+  _damage: 8
   _rb: {fileID: 6474166914639425906}
   _maxHealth: 5
-  _minVariance: 1
-  _maxVarience: 2
+  _minVariance: 3
+  _maxVarience: 5
   _damageIntensity: -10

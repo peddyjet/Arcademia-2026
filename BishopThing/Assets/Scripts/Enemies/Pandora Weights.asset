@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyWeights:
   - Type: 1
-    Weight: 3
+    Weight: 4
     enemyPrefab: {fileID: 3461800891609252440, guid: 3c35d6411ac8f9e45a0ab033c8ee69f1, type: 3}
   - Type: 4
-    Weight: 2
+    Weight: 1
     enemyPrefab: {fileID: 3461800891609252440, guid: 3037ee3999e8ccd4191e17e953c24e92, type: 3}
   - Type: 2
-    Weight: 4
+    Weight: 3
     enemyPrefab: {fileID: 6383677150691372968, guid: f67e96eaf7f36e54d8e71a39186c1f11, type: 3}
-  - Type: 2
-    Weight: 4
+  - Type: 4
+    Weight: 2
     enemyPrefab: {fileID: 6383677150691372968, guid: 953b7a8be0d32624e96f37a8db87018e, type: 3}
-  - Type: 2
-    Weight: 4
+  - Type: 8
+    Weight: 1
     enemyPrefab: {fileID: 6383677150691372968, guid: 0389097d6cf80084abe18e1358386130, type: 3}
