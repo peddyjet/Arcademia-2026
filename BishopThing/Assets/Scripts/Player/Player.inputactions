@@ -25,9 +25,27 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Bless",
+                    "name": "Heal",
                     "type": "Button",
                     "id": "fe0adb7f-84de-4954-8c96-62841e477c96",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Strength",
+                    "type": "Button",
+                    "id": "8f055717-74b1-4cfb-9594-669a02aca3d1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Invisible",
+                    "type": "Button",
+                    "id": "0748d56d-57a6-4f76-b796-9cd9bd417f2e",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -203,11 +221,11 @@
                 {
                     "name": "",
                     "id": "b6f02f91-dab0-4648-bf6f-893a941be077",
-                    "path": "<Keyboard>/b",
+                    "path": "<Keyboard>/z",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Bless",
+                    "action": "Heal",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -218,7 +236,51 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Bless",
+                    "action": "Heal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c4717020-979b-46f5-9e14-71aa2b1a7857",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Strength",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f333541d-c75b-4c50-bc61-9971643f3032",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Strength",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "58d3265e-0e81-4b66-8d8f-30b149703de2",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Invisible",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "781d7fbb-c8c7-477e-bf1d-e7780770f145",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Invisible",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -5,6 +5,7 @@ using UnityEngine;
 using Assets.Scripts.Items;
 using System.Linq;
 using TMPro;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Handles the logic of collecting items and opening Pandora's Box. The box will open every time a new item is collected, resulting in a swarm of enemies.
@@ -12,7 +13,7 @@ using TMPro;
 public class PandorasBox : MonoBehaviour
 {
 
-    private Dictionary<IPotion, int> potions;
+    private Dictionary<string, Stack<Potion>> potions = new();
 
     [Header("Pandora's Box Settings")]
     [SerializeField] private PandoraWeights _pandoraWeights;
@@ -33,30 +34,46 @@ public class PandorasBox : MonoBehaviour
         }
     }
 
+    public void UseHealPotionHandler(InputAction.CallbackContext context) 
+    {
+        if (context.performed) UsePotion("1");
+    }
+
+    public void UsePotion(string uuid) 
+    {
+        if(!potions.ContainsKey(uuid) || potions[uuid].Count == 0)
+        {
+            OpenBox(1, "You couldn't find any of that potion!");
+            return;
+        }
+
+        var potionList = potions[uuid];
+        var potion = potionList.Pop();
+        OpenBox(1, potion.ConsumeMessage);
+        potion.OnConsumption(GetComponent<PlayerController>());
+        UpdatePotionUI();
+    }
+
     public void UpdatePotionUI()
     {
         var links = FindObjectsByType<UILink>(FindObjectsSortMode.None);
         foreach (var valuePair in potions)
         {
-            links.First(i => i.UUID == valuePair.Key.TargetUUID).GetComponent<TextMeshProUGUI>().text = valuePair.Value.ToString();
+            links.First(i => i.UUID == valuePair.Key).GetComponent<TextMeshProUGUI>().text = valuePair.Value.Count.ToString();
         }
+    }
+
+    public void IssuePotion(Potion potion)
+    {
+        if (!potions.ContainsKey(potion.TargetUUID))
+            potions.Add(potion.TargetUUID, new Stack<Potion>(new Potion[] {potion}));
+        else potions[potion.TargetUUID].Push(potion);
+        UpdatePotionUI();
     }
 
     public void AddCollectible(ICollectible collectible)
     {
-        // Declare to collectible that it has been collected, so it can do its own logic (e.g. disappear, play sound, etc.)
         collectible.Collect();
-         
-        // Add potions to inventory
-        if(collectible.GetType().GetInterfaces().Any(i => i.Name == nameof(IPotion)))
-        {
-            if (!potions.ContainsKey(collectible as IPotion))
-                potions.Add(collectible as IPotion, 1);
-            else potions[collectible as IPotion] += 1;
-            UpdatePotionUI();
-        }
-
-        // TODO: Add Logic to open Pandora's Box every time a collectible is added.
         OpenBox(message: collectible.Message);
     }
 

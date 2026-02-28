@@ -116,6 +116,21 @@ public class PlayerController : MonoBehaviour
         _meleeAttackGyrator.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(_directionOfTravel.y, _directionOfTravel.x) * Mathf.Rad2Deg);
     }
 
+    public void UseHealPotionHandler(InputAction.CallbackContext context)
+    {
+        if (context.performed) GetComponent<PandorasBox>().UsePotion("1");
+    }
+
+    public void UseStrengthPotionHandler(InputAction.CallbackContext context)
+    {
+        if (context.performed) GetComponent<PandorasBox>().UsePotion("2");
+    }
+
+    public void UseInvisibilityPotionHandler(InputAction.CallbackContext context)
+    {
+        if (context.performed) GetComponent<PandorasBox>().UsePotion("3");
+    }
+
     public void Bless()
     {
         if (CurrentBlessings > 0)

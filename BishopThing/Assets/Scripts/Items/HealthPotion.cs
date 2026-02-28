@@ -1,22 +1,19 @@
 using UnityEngine;
 
-public class HealthPotion : MonoBehaviour, IPotion
+class HealthPotion : MonoBehaviour, ICollectible
 {
-    private static float _heal = 30;
-
     public string Message => "+ Health Potion";
-
-    public string ConsumeMessage => "- Health Potion";
-
-    public string TargetUUID => "1";
+    [SerializeField] private float _heal = 40;
 
     public void Collect()
     {
-        gameObject.SetActive(false);
+        FindFirstObjectByType<PandorasBox>().IssuePotion(new Potion { ConsumeMessage = "- Health Potion", OnConsumption = player => player.Heal(_heal), TargetUUID = "1" });
+        Destroy(gameObject);
     }
 
-    public void OnConsumption(PlayerController player)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        player.Heal(_heal);
+        if (collision.gameObject.TryGetComponent<PandorasBox>(out var p))
+            p.AddCollectible(this);
     }
 }
