@@ -16,9 +16,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Throw",
+                    "name": "Attack",
                     "type": "Button",
                     "id": "6f382f3a-01e4-49b1-a98f-99ae1317ac09",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Bless",
+                    "type": "Button",
+                    "id": "fe0adb7f-84de-4954-8c96-62841e477c96",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -149,12 +158,23 @@
                 },
                 {
                     "name": "",
+                    "id": "61b0d782-3fca-44e1-8330-3b6b1cf50289",
+                    "path": "<Joystick>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "64b27a30-0011-4f80-bc53-0fddb6683b79",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Game Jam",
-                    "action": "Throw",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -165,7 +185,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Game Jam",
-                    "action": "Throw",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b6f02f91-dab0-4648-bf6f-893a941be077",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Bless",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "92d72244-ed86-4caa-af3e-f34636e0b318",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Bless",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
