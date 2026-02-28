@@ -5,13 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Assets.Scripts.Items
+public interface IPotion : ICollectible
 {
-    internal interface IPotion : ICollectible
-    {
 
-        public string ConsumeMessage { get; }
-        public void OnConsumption(PlayerController player);
-        public string TargetUUID { get; }
-    }
+    public string ConsumeMessage { get; }
+    public void OnConsumption(PlayerController player);
+    public string TargetUUID { get; }
 }
+

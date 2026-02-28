@@ -125,4 +125,5 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Teleport(Vector3 position) => transform.position = position;
+    public void Heal(float amount) => _currentHealth = Mathf.Min(_currentHealth + amount, _maxHealth);
 }
