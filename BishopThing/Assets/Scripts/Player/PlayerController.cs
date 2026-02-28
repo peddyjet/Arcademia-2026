@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
     private bool _isMoving;
     private float _defaultDamage;
 
+    private bool _invulnerable = false;
+
     // audio stuff
     public AudioSource bishopSource;
     public AudioClip attackClip;
@@ -93,6 +95,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (_invulnerable) return;
         _currentHealth -= damage;
 
         bishopSource.Stop();
@@ -112,10 +115,10 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(GiveIFrames(_iframes));
     }
 
-    protected IEnumerator<WaitForSeconds> GiveIFrames(float frames)
+    public IEnumerator<WaitForSeconds> GiveIFrames(float frames)
     {
         var sprite = _sprite;
-        tag = "Untagged";
+        _invulnerable = true;
         sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0.5f);
         yield return new WaitForSeconds(frames / 3);
         sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1f);
@@ -123,7 +126,7 @@ public class PlayerController : MonoBehaviour
         sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0.5f);
         yield return new WaitForSeconds(frames / 3);
         sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1f);
-        tag = "Player";
+        _invulnerable = false;
     }
 
     public void OnAttack(InputAction.CallbackContext input)
