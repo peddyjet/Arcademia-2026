@@ -368,6 +368,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: fe0adb7f-84de-4954-8c96-62841e477c96
     m_ActionName: 'Player/Bless[/Keyboard/b]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8f055717-74b1-4cfb-9594-669a02aca3d1
+    m_ActionName: 'Player/Strength[/Keyboard/x]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0748d56d-57a6-4f76-b796-9cd9bd417f2e
+    m_ActionName: 'Player/Invisible[/Keyboard/c]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -391,7 +399,7 @@ MonoBehaviour:
   _maxHealth: 100
   _maxBlessings: 5
   _startingBlessings: 2
-  _iframes: 1
+  _iframes: 0.25
   _damageAmount: 15
   _attackCooldown: 0.5
   _healthBar: {fileID: 0}
