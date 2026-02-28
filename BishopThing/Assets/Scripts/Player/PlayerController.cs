@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
             CurrentBlessings--;
             _currentHealth = Random.Range(_maxHealth * 0.5f, _maxHealth);
             GetComponent<PandorasBox>().OpenBox(Random.Range(11, 20) / 10);
-            StartCoroutine(GiveIFrames());
+            StartCoroutine(GiveIFrames(_iframes));
         };
     }
 
@@ -90,19 +90,19 @@ public class PlayerController : MonoBehaviour
             else SceneLoader.LoadSceneIdxStatic(0);
             return;
         }
-        StartCoroutine(GiveIFrames());
+        StartCoroutine(GiveIFrames(_iframes));
     }
 
-    protected IEnumerator<WaitForSeconds> GiveIFrames()
+    protected IEnumerator<WaitForSeconds> GiveIFrames(float frames)
     {
         var sprite = _sprite;
         tag = "Untagged";
         sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0.5f);
-        yield return new WaitForSeconds(_iframes / 3);
+        yield return new WaitForSeconds(frames / 3);
         sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1f);
-        yield return new WaitForSeconds(_iframes / 3);
+        yield return new WaitForSeconds(frames / 3);
         sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0.5f);
-        yield return new WaitForSeconds(_iframes / 3);
+        yield return new WaitForSeconds(frames / 3);
         sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1f);
         tag = "Player";
     }
