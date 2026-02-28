@@ -6757,7 +6757,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bishops Box
+  m_text: The Bishops Box
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 64c016157caa36944bbd85cce1081756, type: 2}
   m_sharedMaterial: {fileID: 8128063233785476515, guid: 64c016157caa36944bbd85cce1081756, type: 2}
