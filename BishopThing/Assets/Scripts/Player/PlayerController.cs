@@ -35,6 +35,12 @@ public class PlayerController : MonoBehaviour
     private bool _isMoving;
     private float _defaultDamage;
 
+    // audio stuff
+    public AudioSource bishopSource;
+    public AudioClip attackClip;
+    public AudioClip damageClip;
+    public AudioClip blessingsClip;
+
     private void Start()
     {
         _defaultDamage = _damageAmount;
@@ -42,6 +48,10 @@ public class PlayerController : MonoBehaviour
         CurrentBlessings = _startingBlessings;
         OnBlessingUsed += () =>
         {
+            // audio stuff
+            bishopSource.Stop();
+            bishopSource.PlayOneShot(blessingsClip);
+
             CurrentBlessings--;
             _currentHealth = Random.Range(_maxHealth * 0.5f, _maxHealth);
             GetComponent<PandorasBox>().OpenBox(Random.Range(11, 20) / 10);
@@ -84,6 +94,12 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         _currentHealth -= damage;
+
+        bishopSource.Stop();
+        // why not?
+        bishopSource.pitch = Random.Range(0.85f,1.15f);
+        bishopSource.PlayOneShot(damageClip);
+
         if (_currentHealth <= 0)
         {
             if(CurrentBlessings > 0)
@@ -117,6 +133,13 @@ public class PlayerController : MonoBehaviour
         _lastAttackTime = std::DateTime.Now;
         _meleeAttackSlash.SetTrigger("Attack");
         _meleeAttackGyrator.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(_directionOfTravel.y, _directionOfTravel.x) * Mathf.Rad2Deg);
+
+        bishopSource.Stop();
+
+        // because again, why not?
+        bishopSource.pitch = Random.Range(0.9f,1.1f);
+
+        bishopSource.PlayOneShot(attackClip);
     }
 
     public void UseHealPotionHandler(InputAction.CallbackContext context)

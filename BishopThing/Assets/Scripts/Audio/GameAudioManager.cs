@@ -1,5 +1,3 @@
-// Untested, unimplemented
-
 using UnityEngine;
 using System.Collections;
 using System.Runtime.CompilerServices;
@@ -12,6 +10,11 @@ public class GameAudioManager : MonoBehaviour
     public AudioClip loadLevel;
     public AudioClip[] levelTunes;
 
+    void Start()
+    {
+        StartNewLevel(0);
+    }
+
     public void StartNewLevel(int levelIndex){
         StartCoroutine(PlayLevelSequence(levelIndex));
     }
@@ -23,8 +26,8 @@ public class GameAudioManager : MonoBehaviour
         // new round? happy days - play the initial tune
         levelStart.PlayOneShot(loadLevel);
 
-        // wait a bit for the initial tune to run its course
-        yield return new WaitForSeconds(2f);
+        // wait a bit for the initial tune to run its course (it's 8s)
+        yield return new WaitForSeconds(8f);
 
         // play the level music
         music.clip = levelTunes[levelIndex];
