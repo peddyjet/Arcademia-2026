@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CryptGate : MonoBehaviour, ICollectible
 {
     [SerializeField] GameObject GoblinKing;
+    [SerializeField] GameObject _healthBar;
     public string Message => "You scramble for two crypt keys...";
 
     public void Collect()
@@ -12,6 +14,7 @@ public class CryptGate : MonoBehaviour, ICollectible
 
         b.CryptKeys -= 2;
         GoblinKing.SetActive(true);
+        _healthBar.SetActive(true);
         Destroy(gameObject);
     }
 }
