@@ -393,6 +393,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 938098699}
     m_Modifications:
+    - target: {fileID: 2659850168242468479, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.375
+      objectReference: {fileID: 0}
     - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.31541
@@ -432,6 +448,10 @@ PrefabInstance:
     - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968767253212133816, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6207919677708642640, guid: 5f9245bb40bfc5e47ae28aec2d0df7ea, type: 3}
       propertyPath: target
@@ -1147,13 +1167,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoblinKing
       objectReference: {fileID: 0}
+    - target: {fileID: 8487412337617954540, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
+      propertyPath: _maxHealth
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 8637750097713431225, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 188.8
+      value: 188.58
       objectReference: {fileID: 0}
     - target: {fileID: 8637750097713431225, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 32.99
+      value: 28.19
       objectReference: {fileID: 0}
     - target: {fileID: 8637750097713431225, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1192,6 +1216,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
+--- !u!1 &225694823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4143123049608545746, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
+  m_PrefabInstance: {fileID: 225694822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &227965246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44236,7 +44265,7 @@ Transform:
   m_GameObject: {fileID: 526597154}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.57, y: 0.46, z: -10}
+  m_LocalPosition: {x: 0.47, y: 0.46, z: -10}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44909,7 +44938,7 @@ PrefabInstance:
       objectReference: {fileID: 1759156677}
     - target: {fileID: 5968767253212133816, guid: eefeb11c853e8b34e841be0eddaf4774, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.57
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 5968767253212133816, guid: eefeb11c853e8b34e841be0eddaf4774, type: 3}
       propertyPath: m_LocalPosition.y
@@ -66324,7 +66353,7 @@ Transform:
   m_GameObject: {fileID: 1831060349}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.57, y: 0.46, z: -10}
+  m_LocalPosition: {x: 0.47, y: 0.46, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -68176,7 +68205,7 @@ PrefabInstance:
     - target: {fileID: 4673215393838750574, guid: 787815661b6eaad49af32c513f4024f1, type: 3}
       propertyPath: GoblinKing
       value: 
-      objectReference: {fileID: 689315848}
+      objectReference: {fileID: 225694823}
     - target: {fileID: 6216880166366247073, guid: 787815661b6eaad49af32c513f4024f1, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -68421,3 +68450,4 @@ SceneRoots:
   - {fileID: 258214697}
   - {fileID: 926981850}
   - {fileID: 1240477642}
+  - {fileID: 225694822}
