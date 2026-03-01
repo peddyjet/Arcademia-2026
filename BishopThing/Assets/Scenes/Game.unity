@@ -1135,6 +1135,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5407494375436822949, guid: 192d8a5d34607c44e896e4c036b29385, type: 3}
   m_PrefabInstance: {fileID: 199403927}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &225694822
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4143123049608545746, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
+      propertyPath: m_Name
+      value: GoblinKing
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637750097713431225, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 188.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637750097713431225, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 32.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637750097713431225, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637750097713431225, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637750097713431225, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637750097713431225, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637750097713431225, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637750097713431225, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637750097713431225, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637750097713431225, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
 --- !u!1001 &227965246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68116,6 +68173,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 938098699}
     m_Modifications:
+    - target: {fileID: 4673215393838750574, guid: 787815661b6eaad49af32c513f4024f1, type: 3}
+      propertyPath: GoblinKing
+      value: 
+      objectReference: {fileID: 689315848}
     - target: {fileID: 6216880166366247073, guid: 787815661b6eaad49af32c513f4024f1, type: 3}
       propertyPath: m_SortingOrder
       value: 1
