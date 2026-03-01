@@ -62935,6 +62935,8 @@ MonoBehaviour:
   _aimSlider: {fileID: 639642374}
   _fishingMiniGame: {fileID: 272675096}
   _reward: {fileID: 4427082051159747645, guid: 5f0483caf58b08a4d9ea5989832cf081, type: 3}
+  bishopSource: {fileID: 44280236}
+  fishingClip: {fileID: 8300000, guid: 049dd19943d155f47ba2cf20fa083620, type: 3}
 --- !u!61 &1240477640
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -64389,8 +64391,8 @@ MonoBehaviour:
     Click V
     (Button D) to reel in!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1cdf5d9db460b334a80107176c16e691, type: 2}
+  m_sharedMaterial: {fileID: 2404095147301752611, guid: 1cdf5d9db460b334a80107176c16e691, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -64414,7 +64416,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 49.05
+  m_fontSize: 58.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -64452,7 +64454,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 24.419281, z: 0, w: 0}
+  m_margin: {x: 0, y: 142.59427, z: 0, w: -107.6236}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -67320,7 +67322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -18.407715, y: -39.76068}
+  m_AnchoredPosition: {x: -18.407715, y: -39.760742}
   m_SizeDelta: {x: -457.984, y: -259.1809}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2033111396
