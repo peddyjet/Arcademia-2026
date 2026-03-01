@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private SpriteRenderer _sprite;
     [SerializeField] private Animator _meleeAttackSlash;
     [SerializeField] private GameObject _meleeAttackGyrator;
+    [SerializeField] private Fish _fisingGame;
 
     private int _currentBlessings;
     public int CurrentBlessings { get => _currentBlessings; set { _currentBlessings = Mathf.Min(value, _maxBlessings); } }
@@ -136,6 +137,11 @@ public class PlayerController : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext input)
     {
+        if(_fisingGame.isActiveAndEnabled && _fisingGame.IsFishing)
+        {
+            _fisingGame.Reel();
+        }
+
         if(_lastAttackTime + std::TimeSpan.FromSeconds(_attackCooldown) > std::DateTime.Now) return;
 
         _lastAttackTime = std::DateTime.Now;

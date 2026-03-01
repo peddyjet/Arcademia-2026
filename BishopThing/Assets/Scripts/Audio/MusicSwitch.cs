@@ -10,7 +10,7 @@ public class MusicSwitch : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            FindObjectOfType<GameAudioManager>().StartNewLevel(trackNumber);
+            FindFirstObjectByType<GameAudioManager>().StartNewLevel(trackNumber);
         }
     }
 }
