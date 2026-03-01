@@ -42373,7 +42373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83af42b0995d0804098f7f4249cfd613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackNumber: 3
+  trackNumber: 2
 --- !u!61 &406121169
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44413,7 +44413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83af42b0995d0804098f7f4249cfd613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackNumber: 2
+  trackNumber: 1
 --- !u!61 &872090555
 BoxCollider2D:
   m_ObjectHideFlags: 0
