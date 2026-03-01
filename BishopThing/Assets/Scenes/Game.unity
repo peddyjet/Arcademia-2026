@@ -44392,9 +44392,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6439435867221536630, guid: eefeb11c853e8b34e841be0eddaf4774, type: 3}
+      propertyPath: _keyText
+      value: 
+      objectReference: {fileID: 1157359588}
+    - target: {fileID: 6439435867221536630, guid: eefeb11c853e8b34e841be0eddaf4774, type: 3}
       propertyPath: _animator
       value: 
       objectReference: {fileID: 38942644}
+    - target: {fileID: 6439435867221536630, guid: eefeb11c853e8b34e841be0eddaf4774, type: 3}
+      propertyPath: _cryptText
+      value: 
+      objectReference: {fileID: 947947306}
     - target: {fileID: 6439435867221536630, guid: eefeb11c853e8b34e841be0eddaf4774, type: 3}
       propertyPath: collectable
       value: 
