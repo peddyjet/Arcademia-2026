@@ -9,11 +9,11 @@ class InvisibilityPotion : MonoBehaviour, ICollectible
     {
         float duration = _duration;
         FindFirstObjectByType<PandorasBox>().IssuePotion(new Potion { ConsumeMessage = "- Invisibility Potion", OnConsumption = player => StartCoroutine(player.GiveIFrames(duration)), TargetUUID = "3" });
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {
+    { 
         if (collision.gameObject.TryGetComponent<PandorasBox>(out var p))
             p.AddCollectible(this);
     }
