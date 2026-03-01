@@ -1501,7 +1501,8 @@ MonoBehaviour:
     you are to touch some grass.
 
 
-    Seriously, there''s no certificate.'
+    Seriously, there''s no certificate. The game
+    is hard though - props.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1cdf5d9db460b334a80107176c16e691, type: 2}
   m_sharedMaterial: {fileID: 2404095147301752611, guid: 1cdf5d9db460b334a80107176c16e691, type: 2}
