@@ -119,17 +119,6 @@ public class PandorasBox : MonoBehaviour
         _permissableDifficulties = permit;
     }
 
-    private void Start()
-    {
-        StartCoroutine(StartSpawn());
-    }
-
-    IEnumerator StartSpawn()
-    {
-        yield return new WaitForSeconds(3);
-        OpenBox(1, "You quickly close the lid of the box.");
-    }
-
     private void Update()
     {
         _keyText.text = Keys.ToString();
