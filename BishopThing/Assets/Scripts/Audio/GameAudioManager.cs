@@ -33,6 +33,7 @@ public class GameAudioManager : MonoBehaviour
 
         // play the level music
         music.clip = levelTunes[levelIndex];
+        music.loop = true;
         music.Play();
     }
 }
