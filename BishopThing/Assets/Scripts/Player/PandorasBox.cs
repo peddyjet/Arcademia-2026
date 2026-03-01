@@ -30,6 +30,9 @@ public class PandorasBox : MonoBehaviour
 
     private int _permissableDifficulties = 28;
 
+    // audio
+    public AudioSource bishopSource;
+    public AudioClip collectable;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.TryGetComponent(out ICollectible collectible))
@@ -74,6 +77,7 @@ public class PandorasBox : MonoBehaviour
     {
         collectible.Collect();
         OpenBox(message: collectible.Message);
+        bishopSource.PlayOneShot(collectable);
     }
 
     public void OpenBox(int iterations = 1, string message = "")

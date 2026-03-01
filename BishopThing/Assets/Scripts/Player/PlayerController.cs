@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip attackClip;
     public AudioClip damageClip;
     public AudioClip blessingsClip;
+    public AudioClip potionClip;
 
     private void Start()
     {
@@ -100,7 +101,6 @@ public class PlayerController : MonoBehaviour
         if (_invulnerable) return;
         _currentHealth -= damage;
 
-        bishopSource.Stop();
         // why not?
         bishopSource.pitch = Random.Range(0.85f,1.15f);
         bishopSource.PlayOneShot(damageClip);
@@ -139,8 +139,6 @@ public class PlayerController : MonoBehaviour
         _meleeAttackSlash.SetTrigger("Attack");
         _meleeAttackGyrator.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(_directionOfTravel.y, _directionOfTravel.x) * Mathf.Rad2Deg);
 
-        bishopSource.Stop();
-
         // because again, why not?
         bishopSource.pitch = Random.Range(0.9f,1.1f);
 
@@ -149,17 +147,24 @@ public class PlayerController : MonoBehaviour
 
     public void UseHealPotionHandler(InputAction.CallbackContext context)
     {
-        if (context.performed) GetComponent<PandorasBox>().UsePotion("1");
+        if (context.performed) {
+            GetComponent<PandorasBox>().UsePotion("1");
+            bishopSource.PlayOneShot(potionClip);
+            }
     }
 
     public void UseStrengthPotionHandler(InputAction.CallbackContext context)
     {
-        if (context.performed) GetComponent<PandorasBox>().UsePotion("2");
+        if (context.performed) {
+            GetComponent<PandorasBox>().UsePotion("2");
+            bishopSource.PlayOneShot(potionClip);}
     }
 
     public void UseInvisibilityPotionHandler(InputAction.CallbackContext context)
     {
-        if (context.performed) GetComponent<PandorasBox>().UsePotion("3");
+        if (context.performed) {
+            GetComponent<PandorasBox>().UsePotion("3");
+            bishopSource.PlayOneShot(potionClip);}
     }
 
     public void Bless()
