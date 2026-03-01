@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (_invulnerable || GodMode) return;
+        if (_invulnerable || GodMode || (_fisingGame.isActiveAndEnabled && _fisingGame.IsFishing)) return;
         _currentHealth -= damage;
 
         // why not?

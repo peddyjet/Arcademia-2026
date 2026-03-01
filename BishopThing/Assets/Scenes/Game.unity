@@ -1171,9 +1171,6 @@ PrefabInstance:
       propertyPath: _healthBarSlider
       value: 
       objectReference: {fileID: 4745653512431473070}
-      propertyPath: _maxHealth
-      value: 140
-      objectReference: {fileID: 0}
     - target: {fileID: 8637750097713431225, guid: 1af8382200f776f4d836d70d0001820d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 188.58
@@ -44268,7 +44265,7 @@ Transform:
   m_GameObject: {fileID: 526597154}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.47, y: 0.46, z: -10}
+  m_LocalPosition: {x: 0.521, y: 0.479, z: -10}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44941,11 +44938,11 @@ PrefabInstance:
       objectReference: {fileID: 1759156677}
     - target: {fileID: 5968767253212133816, guid: eefeb11c853e8b34e841be0eddaf4774, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.47
+      value: 0.521
       objectReference: {fileID: 0}
     - target: {fileID: 5968767253212133816, guid: eefeb11c853e8b34e841be0eddaf4774, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.46
+      value: 0.479
       objectReference: {fileID: 0}
     - target: {fileID: 5968767253212133816, guid: eefeb11c853e8b34e841be0eddaf4774, type: 3}
       propertyPath: m_LocalPosition.z
@@ -66356,7 +66353,7 @@ Transform:
   m_GameObject: {fileID: 1831060349}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.47, y: 0.46, z: -10}
+  m_LocalPosition: {x: 0.521, y: 0.479, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
