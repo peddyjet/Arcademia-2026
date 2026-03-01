@@ -12,7 +12,7 @@ class StrengthPotion : MonoBehaviour, ICollectible
         var duration = _duration;
 
         FindFirstObjectByType<PandorasBox>().IssuePotion(new Potion { ConsumeMessage = "- Strength Potion", OnConsumption = player => player.Buff(additionalPower, duration), TargetUUID = "2" });
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
