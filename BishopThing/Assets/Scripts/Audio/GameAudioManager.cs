@@ -16,10 +16,12 @@ public class GameAudioManager : MonoBehaviour
     }
 
     public void StartNewLevel(int levelIndex){
+        StopAllCoroutines();
         StartCoroutine(PlayLevelSequence(levelIndex));
     }
 
     IEnumerator PlayLevelSequence(int levelIndex){
+        levelStart.Stop();
         // stop current track
         music.Stop();
 

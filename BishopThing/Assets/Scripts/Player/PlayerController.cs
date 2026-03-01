@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         if (_invulnerable) return;
-        _currentHealth -= damage;
+        //_currentHealth -= damage;
 
         // why not?
         bishopSource.pitch = Random.Range(0.85f,1.15f);
