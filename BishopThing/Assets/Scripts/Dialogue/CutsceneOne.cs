@@ -37,10 +37,10 @@ class CutsceneOne : MonoBehaviour
         lines.Add(new DialogueLine { speaker = "Bishop", text = "What on Earth is this mysterious box?" });
         lines.Add(new DialogueLine { speaker = "Goblin", text = "It's Pandoras Box! You're cursed, fool!" });
         lines.Add(new DialogueLine { speaker = "Goblin", text = "You must collect eight keys in order to open the box and be free from the curse!" });
-        lines.Add(new DialogueLine { speaker = "Goblin", text = "You can attack enemies with SPACEBAR, move with WASD, I assume you've played a game before?" });
-        lines.Add(new DialogueLine { speaker = "Goblin", text = "E to interact with things.. blah blah. if you don't know this drill go start with Minecraft!" });
+        lines.Add(new DialogueLine { speaker = "Goblin", text = "You can attack enemies with V (Button D), move with the arrow keys (or joystick); I assume you've played a game before?" });
+        lines.Add(new DialogueLine { speaker = "Goblin", text = "Z, X and C (A, B and C) to drink potions.. blah blah. if you don't know this drill go start with Minecraft!" });
         lines.Add(new DialogueLine { speaker = "Goblin", text = "Good luck, you'll need it!"});
-        lines.Add(new DialogueLine { speaker = "Bishop", text = "EURGH! My Uber Eats driver is due anytime now!"});
+        lines.Add(new DialogueLine { speaker = "Bishop", text = "EURGH! My Uber Eats driver is due anytime now! Wait... what's a video game?"});
 
         currentLineIndex = 0;
     }
