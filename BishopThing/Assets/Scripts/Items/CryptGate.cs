@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CryptGate : MonoBehaviour, ICollectible
 {
-    public string Message => "You try unlock the door (needs two crypt keys)";
+    public string Message => "You scramble for two crypt keys...";
 
     public void Collect()
     {
