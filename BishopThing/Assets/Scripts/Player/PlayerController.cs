@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip attackClip;
     public AudioClip damageClip;
     public AudioClip blessingsClip;
+    public AudioClip potionClip;
 
     private void Start()
     {
@@ -149,17 +150,24 @@ public class PlayerController : MonoBehaviour
 
     public void UseHealPotionHandler(InputAction.CallbackContext context)
     {
-        if (context.performed) GetComponent<PandorasBox>().UsePotion("1");
+        if (context.performed) {
+            GetComponent<PandorasBox>().UsePotion("1");
+            bishopSource.PlayOneShot(potionClip);
+            }
     }
 
     public void UseStrengthPotionHandler(InputAction.CallbackContext context)
     {
-        if (context.performed) GetComponent<PandorasBox>().UsePotion("2");
+        if (context.performed) {
+            GetComponent<PandorasBox>().UsePotion("2");
+            bishopSource.PlayOneShot(potionClip);}
     }
 
     public void UseInvisibilityPotionHandler(InputAction.CallbackContext context)
     {
-        if (context.performed) GetComponent<PandorasBox>().UsePotion("3");
+        if (context.performed) {
+            GetComponent<PandorasBox>().UsePotion("3");
+            bishopSource.PlayOneShot(potionClip);}
     }
 
     public void Bless()
