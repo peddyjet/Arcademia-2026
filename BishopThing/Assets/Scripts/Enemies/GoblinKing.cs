@@ -1,6 +1,8 @@
 using Assets.Scripts.Enemies;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GoblinKing : Enemy
@@ -20,6 +22,7 @@ public class GoblinKing : Enemy
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private float _shootCooldown = 2f;
     [SerializeField] private float _shootRange = 8f;
+    [SerializeField] Slider _healthBarSlider;
 
     private float _shootTimer;
     private Vector2 _currentDirection;
@@ -50,7 +53,7 @@ public class GoblinKing : Enemy
             return;
         }
 
-        
+        _healthBarSlider.value = (_maxHealth - _currentHealth) / _maxHealth;
 
         _shootTimer -= Time.deltaTime;
 
