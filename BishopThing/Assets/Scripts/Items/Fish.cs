@@ -28,7 +28,7 @@ class Fish : MonoBehaviour
     {
         while (true) {
             _aimSlider.value += Random.Range(-0.05f, 0.1f);
-            if (_aimSlider.value > 1) { _aimSlider.value = 1; }
+            if (_aimSlider.value > 1) { _aimSlider.value = 0; }
             if (_aimSlider.value < 0) { _aimSlider.value = 0; }
             yield return new WaitForSeconds(0.15f);
         }
