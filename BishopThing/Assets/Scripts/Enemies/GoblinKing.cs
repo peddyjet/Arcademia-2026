@@ -78,6 +78,14 @@ public class GoblinKing : Enemy
 
             moveDirection = _currentDirection;
 
+        Vector2 directionToPlayer =
+    (_playerTransform.position - transform.position).normalized;
+
+        // Rotate toward player
+        float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg + 90;
+
+        _rb.MoveRotation(angle);
+
         Vector2 targetVelocity = moveDirection * (_speed + _currentVariance);
 
         _rb.linearVelocity = Vector2.Lerp(
