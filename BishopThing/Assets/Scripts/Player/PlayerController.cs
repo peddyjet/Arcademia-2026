@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
             CurrentBlessings--;
             _currentHealth = Random.Range(_maxHealth * 0.5f, _maxHealth);
-            GetComponent<PandorasBox>().OpenBox(Random.Range(11, 20) / 10);
+            GetComponent<PandorasBox>().OpenBox(Random.Range(11, 20) / 10, "You used a blessing to heal");
             StartCoroutine(GiveIFrames(_iframes));
         });
     }

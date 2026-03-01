@@ -7,7 +7,8 @@ class InvisibilityPotion : MonoBehaviour, ICollectible
 
     public void Collect()
     {
-        FindFirstObjectByType<PandorasBox>().IssuePotion(new Potion { ConsumeMessage = "- Invisibility Potion", OnConsumption = player => StartCoroutine(player.GiveIFrames(_duration)), TargetUUID = "3" });
+        float duration = _duration;
+        FindFirstObjectByType<PandorasBox>().IssuePotion(new Potion { ConsumeMessage = "- Invisibility Potion", OnConsumption = player => StartCoroutine(player.GiveIFrames(duration)), TargetUUID = "3" });
         Destroy(gameObject);
     }
 

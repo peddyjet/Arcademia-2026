@@ -462,6 +462,38 @@ PrefabInstance:
       propertyPath: _offset.y
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 592626801}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangePermit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PandorasBox, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8779667693241535536, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 55.21
@@ -43480,6 +43512,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5968767253212133816, guid: eefeb11c853e8b34e841be0eddaf4774, type: 3}
   m_PrefabInstance: {fileID: 592626798}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &592626801 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6439435867221536630, guid: eefeb11c853e8b34e841be0eddaf4774, type: 3}
+  m_PrefabInstance: {fileID: 592626798}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187dfdafec21e7649b6d7a1fe29d3127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &599521777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59854,6 +59897,38 @@ PrefabInstance:
     - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
       propertyPath: _offset.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 592626801}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangePermit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PandorasBox, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046281631754198924, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
+      propertyPath: _onFirstAccess.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8779667693241535536, guid: 77f2fa31fd572914f8ef739e0e3e919a, type: 3}
       propertyPath: m_LocalPosition.x

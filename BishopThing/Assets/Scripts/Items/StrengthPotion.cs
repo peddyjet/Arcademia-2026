@@ -8,7 +8,10 @@ class StrengthPotion : MonoBehaviour, ICollectible
 
     public void Collect()
     {
-        FindFirstObjectByType<PandorasBox>().IssuePotion(new Potion { ConsumeMessage = "- Strength Potion", OnConsumption = player => player.Buff(_additionalPower, _duration), TargetUUID = "2" });
+        var additionalPower = _additionalPower;
+        var duration = _duration;
+
+        FindFirstObjectByType<PandorasBox>().IssuePotion(new Potion { ConsumeMessage = "- Strength Potion", OnConsumption = player => player.Buff(additionalPower, duration), TargetUUID = "2" });
         Destroy(gameObject);
     }
 

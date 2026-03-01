@@ -42,14 +42,14 @@ namespace Assets.Scripts.Enemies
         [SerializeField] private EnemyWeight[] _enemyWeights;
         public IEnumerable<EnemyWeight> EnemyWeights => _enemyWeights;
 
-        public IEnumerable<Enemy> GetRandomEnemies(int count, EnemyType blacklist)
+        public IEnumerable<Enemy> GetRandomEnemies(int count, int blacklist)
         {
             if (_enemyWeights == null || _enemyWeights.Length == 0 || count <= 0)
                 return new List<Enemy>();
 
             // Filter out blacklisted enemy types using bitwise check
             var validEnemies = _enemyWeights
-                .Where(e => (e.Type & blacklist) == 0)
+                .Where(e => ((int)e.Type & blacklist) == 0)
                 .ToArray();
 
             if (validEnemies.Length == 0)

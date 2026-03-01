@@ -6,6 +6,7 @@ using Assets.Scripts.Items;
 using System.Linq;
 using TMPro;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 /// <summary>
 /// Handles the logic of collecting items and opening Pandora's Box. The box will open every time a new item is collected, resulting in a swarm of enemies.
@@ -26,6 +27,9 @@ public class PandorasBox : MonoBehaviour
     [SerializeField][Min(0)] private float _lowerBoundVelocity = 1;
     [SerializeField][Min(0)] private float _upperBoundVelocity = 5;
     [SerializeField][Range(0f,2f)] private float _offset = 0.3f;
+
+    private int _permissableDifficulties = 28;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.TryGetComponent(out ICollectible collectible))
@@ -83,7 +87,7 @@ public class PandorasBox : MonoBehaviour
         {
             var numberToSpawn = UnityEngine.Random.Range(_lowerBoundSpawn, _upperBoundSpawn + 1);
             var selectedEnemies = new List<Enemy>();
-            var enemies = _pandoraWeights.GetRandomEnemies(numberToSpawn, PandoraWeights.EnemyType.None);
+            var enemies = _pandoraWeights.GetRandomEnemies(numberToSpawn, _permissableDifficulties);
             foreach (var enemy in enemies)
             {
                 var obj = Instantiate(enemy.gameObject, transform.position + new Vector3(UnityEngine.Random.Range(-_offset, _offset),
@@ -102,15 +106,19 @@ public class PandorasBox : MonoBehaviour
         _animator.SetTrigger("Opening");
     }
 
-    void Start()
+    public void ChangePermit(int permit)
     {
-        StartCoroutine(GracePeriod());
+        _permissableDifficulties = permit;
     }
 
-    IEnumerator<WaitForSeconds> GracePeriod()
+    private void Start()
+    {
+        StartCoroutine(StartSpawn());
+    }
+
+    IEnumerator StartSpawn()
     {
         yield return new WaitForSeconds(3);
-        
-        OpenBox();
+        OpenBox(1, "You quickly close the lid of the box.");
     }
 }
