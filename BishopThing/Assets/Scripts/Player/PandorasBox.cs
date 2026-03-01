@@ -26,6 +26,10 @@ public class PandorasBox : MonoBehaviour
     [SerializeField][Min(0)] private float _lowerBoundVelocity = 1;
     [SerializeField][Min(0)] private float _upperBoundVelocity = 5;
     [SerializeField][Range(0f,2f)] private float _offset = 0.3f;
+
+    // audio
+    public AudioSource bishopSource;
+    public AudioClip collectable;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.TryGetComponent(out ICollectible collectible))
@@ -70,6 +74,7 @@ public class PandorasBox : MonoBehaviour
     {
         collectible.Collect();
         OpenBox(message: collectible.Message);
+        bishopSource.PlayOneShot(collectable);
     }
 
     public void OpenBox(int iterations = 1, string message = "")

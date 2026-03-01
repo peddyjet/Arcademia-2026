@@ -101,7 +101,6 @@ public class PlayerController : MonoBehaviour
         if (_invulnerable) return;
         _currentHealth -= damage;
 
-        bishopSource.Stop();
         // why not?
         bishopSource.pitch = Random.Range(0.85f,1.15f);
         bishopSource.PlayOneShot(damageClip);
@@ -139,8 +138,6 @@ public class PlayerController : MonoBehaviour
         _lastAttackTime = std::DateTime.Now;
         _meleeAttackSlash.SetTrigger("Attack");
         _meleeAttackGyrator.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(_directionOfTravel.y, _directionOfTravel.x) * Mathf.Rad2Deg);
-
-        bishopSource.Stop();
 
         // because again, why not?
         bishopSource.pitch = Random.Range(0.9f,1.1f);
