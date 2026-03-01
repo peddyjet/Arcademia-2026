@@ -1,3 +1,5 @@
+// Had issues with unity's animation thingy-mbob so this isnt used - but it's staying :)
+
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -43,6 +45,7 @@ public class CutsceneFinal : MonoBehaviour
     public void FinishCutscene()
     {
         //TODO - change this or figure out how to get to the final arena
+        //SPOILER, that todo^ will never be todooood
         SceneManager.LoadScene(0);
     }
 }

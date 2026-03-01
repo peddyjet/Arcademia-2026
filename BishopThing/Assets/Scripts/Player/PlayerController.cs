@@ -46,6 +46,9 @@ public class PlayerController : MonoBehaviour
     public AudioClip blessingsClip;
     public AudioClip potionClip;
 
+    // lol
+    private bool GodMode = false;
+
     private void Start()
     {
         _defaultDamage = _damageAmount;
@@ -98,8 +101,8 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (_invulnerable) return;
-        //_currentHealth -= damage;
+        if (_invulnerable || GodMode) return;
+        _currentHealth -= damage;
 
         // why not?
         bishopSource.pitch = Random.Range(0.85f,1.15f);
