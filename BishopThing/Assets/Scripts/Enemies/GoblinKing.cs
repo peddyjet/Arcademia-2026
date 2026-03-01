@@ -3,6 +3,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GoblinKing : Enemy
 {
@@ -106,6 +107,7 @@ public class GoblinKing : Enemy
             if (_currentHealth <= 0)
             {
                 Destroy(gameObject);
+                SceneManager.LoadScene(7);
             }
             else
             {
