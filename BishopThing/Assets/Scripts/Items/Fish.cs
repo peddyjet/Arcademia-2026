@@ -11,6 +11,10 @@ class Fish : MonoBehaviour
     public bool IsFishing => _fishingMiniGame.activeInHierarchy;
     private Coroutine _jigglePhysics;
 
+    // audio
+    public AudioSource bishopSource;
+    public AudioClip fishingClip;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         StartFishingGame();
@@ -18,6 +22,8 @@ class Fish : MonoBehaviour
 
     private void StartFishingGame()
     {
+        bishopSource.PlayOneShot(fishingClip);
+        
         _aimSlider.value = 0;
         _fishingMiniGame.SetActive(true);
         _jigglePhysics = StartCoroutine(JiggleSlider());
