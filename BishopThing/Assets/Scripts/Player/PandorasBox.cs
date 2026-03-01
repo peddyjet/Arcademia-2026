@@ -20,6 +20,8 @@ public class PandorasBox : MonoBehaviour
     [SerializeField] private PandoraWeights _pandoraWeights;
     [SerializeField] private Animator _animator;
     [SerializeField] private PandorasCanvas _pandoraCanvas;
+    [SerializeField] private TextMeshProUGUI _keyText;
+    [SerializeField] private TextMeshProUGUI _cryptText;
 
     [Header("Hyperparameters")]
     [SerializeField][Min(0)] private int _lowerBoundSpawn = 1;
@@ -29,6 +31,8 @@ public class PandorasBox : MonoBehaviour
     [SerializeField][Range(0f,2f)] private float _offset = 0.3f;
 
     private int _permissableDifficulties = 28;
+    public int Keys { get; set; }
+    public int CryptKeys { get; set; }
 
     // audio
     public AudioSource bishopSource;
@@ -124,5 +128,11 @@ public class PandorasBox : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         OpenBox(1, "You quickly close the lid of the box.");
+    }
+
+    private void Update()
+    {
+        _keyText.text = Keys.ToString();
+        _cryptText.text = CryptKeys.ToString() + "/2";
     }
 }
