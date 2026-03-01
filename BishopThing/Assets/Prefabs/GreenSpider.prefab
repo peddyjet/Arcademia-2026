@@ -191,7 +191,7 @@ MonoBehaviour:
   _iframes: 0.5
   _speed: 2
   _accelerationSpeed: 3
-  _damage: 8
+  _damage: 6
   _rb: {fileID: 6474166914639425906}
   _maxHealth: 5
   _minVariance: 3
